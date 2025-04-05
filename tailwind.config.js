@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     container: {
       center: true,
@@ -23,16 +18,12 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0A2540",
-          foreground: "#FFFFFF",
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#00FFFF",
-          foreground: "#0A2540",
-        },
-        accent: {
-          DEFAULT: "#00FFFF",
-          foreground: "#0A2540",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -42,6 +33,10 @@ module.exports = {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -50,7 +45,15 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "apple-blue": "#0071E3",
+        // Custom brand colors
+        brand: {
+          primary: "#0071E3", // Apple Blue
+          secondary: "#00A3E0", // Cyan
+          accent: "#00D4FF", // Light Cyan
+          muted: "#64748B", // Slate
+          dark: "#0F172A", // Slate Dark
+          light: "#F8FAFC", // Slate Light
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

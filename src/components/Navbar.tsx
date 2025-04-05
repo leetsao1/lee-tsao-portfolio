@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -6,11 +5,15 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 10);
+      // Check if we've scrolled past the hero section (assuming hero is 100vh)
+      setIsPastHero(scrollPosition > window.innerHeight * 0.5);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -34,8 +37,29 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold">
-          <span className="gradient-text">Lee Tsao</span>
+        <a
+          href="#home"
+          className={cn(
+            "flex items-center space-x-1 group transition-all duration-500",
+            isPastHero
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-4"
+          )}
+        >
+          <span className="text-2xl font-black tracking-tighter">
+            <span className="text-brand-dark dark:text-white">Lee</span>
+            <span
+              className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary"
+              style={{
+                textShadow: `
+                  0 0 40px rgba(0, 113, 227, 0.2),
+                  0 0 20px rgba(0, 113, 227, 0.2)
+                `,
+              }}
+            >
+              Tsao
+            </span>
+          </span>
         </a>
 
         {/* Desktop Navigation */}
@@ -44,7 +68,7 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-gray-700 dark:text-gray-300 hover:text-apple-blue dark:hover:text-apple-blue transition-colors"
+              className="text-brand-muted hover:text-brand-primary dark:text-gray-300 dark:hover:text-brand-secondary transition-colors"
             >
               {link.name}
             </a>
@@ -70,7 +94,7 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 dark:text-gray-300 hover:text-apple-blue dark:hover:text-apple-blue transition-colors py-2"
+                  className="text-brand-muted hover:text-brand-primary dark:text-gray-300 dark:hover:text-brand-secondary transition-colors py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
