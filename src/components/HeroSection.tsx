@@ -17,7 +17,7 @@ const HeroSection = () => {
           <div className="space-y-8 max-w-xl">
             <div className="flex items-center gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <Avatar className="w-24 h-24 rounded-full border-4 border-apple-blue shadow-lg">
-                <AvatarImage src="/lovable-uploads/6b935307-6168-4e6c-af8f-4f693fc5f7c9.png" alt="Lee Tsao" />
+                <AvatarImage src="/lovable-uploads/52bb672b-51de-4879-8113-6546351c5996.png" alt="Lee Tsao" />
                 <AvatarFallback>LT</AvatarFallback>
               </Avatar>
               <div className="space-y-2">
