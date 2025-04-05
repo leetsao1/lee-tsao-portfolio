@@ -1,109 +1,171 @@
-
 import React from "react";
-import { ArrowDown, Zap, Workflow, Database } from "lucide-react";
+import {
+  ArrowDown,
+  Zap,
+  Workflow,
+  Database,
+  Trophy,
+  CheckCircle2,
+  Users,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black"
+      className="relative min-h-screen flex items-center bg-gradient-to-b from-primary to-primary/90 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.02] pointer-events-none" />
-      
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-start lg:justify-between gap-12">
-          {/* Profile Image - Apple-style positioning */}
-          <div className="relative w-40 h-40 lg:w-72 lg:h-72 mb-6 lg:mb-0 animate-scale-in">
-            <div className="absolute inset-0 bg-gradient-to-br from-apple-blue/20 to-purple-500/20 rounded-full blur-xl opacity-70"></div>
-            <Avatar className="w-full h-full rounded-full border-8 border-white dark:border-gray-900 shadow-2xl overflow-hidden">
-              <AvatarImage 
-                src="/lovable-uploads/52bb672b-51de-4879-8113-6546351c5996.png" 
-                alt="Lee Tsao"
-                className="object-cover scale-110"
-              />
-              <AvatarFallback className="text-4xl font-bold">LT</AvatarFallback>
-            </Avatar>
-            <div className="absolute -bottom-2 -right-2 w-12 h-12 bg-white dark:bg-gray-900 rounded-full flex items-center justify-center shadow-lg">
-              <Database className="w-6 h-6 text-apple-blue" />
+      {/* Tech background pattern */}
+      <div className="absolute inset-0 bg-[url('/tech-pattern.png')] opacity-10" />
+
+      {/* Animated circuit lines */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-1 bg-secondary/20 animate-pulse" />
+        <div className="absolute top-0 left-0 w-1 h-full bg-secondary/20 animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-full h-1 bg-secondary/20 animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-1 h-full bg-secondary/20 animate-pulse" />
+      </div>
+
+      {/* Floating tech elements */}
+      <div className="absolute top-20 left-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-float-delayed" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Profile Image - Modern floating design */}
+          <div className="relative w-64 h-64 lg:w-96 lg:h-96 animate-float">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-70"></div>
+            <img
+              src="/lovable-uploads/52bb672b-51de-4879-8113-6546351c5996.png"
+              alt="Lee Tsao"
+              className="w-full h-full object-cover rounded-2xl shadow-2xl border-8 border-white/10"
+            />
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-primary rounded-xl flex items-center justify-center shadow-lg animate-pulse border border-secondary/20">
+              <Database className="w-8 h-8 text-secondary" />
             </div>
           </div>
 
           {/* Content Section */}
           <div className="space-y-8 max-w-xl">
-            <div className="space-y-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
+            <div
+              className="space-y-2 animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <h1 className="text-5xl sm:text-6xl font-bold leading-tight text-white">
                 Lee Tsao
               </h1>
-              <h2 className="text-3xl sm:text-4xl font-bold gradient-text">
-                Enterprise Solutions Architect
+              <h2 className="text-3xl sm:text-4xl font-bold text-secondary">
+                Enterprise Airtable Architect
               </h2>
             </div>
 
-            <p className="text-lg text-gray-600 dark:text-gray-400 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              Certified Airtable expert and technical project leader with a track record of building 
-              enterprise-scale solutions for cross-functional teams. Currently driving system architecture 
-              and workflow optimization at <span className="font-semibold">Apple</span>.
+            <p
+              className="text-lg text-white/80 animate-fade-in"
+              style={{ animationDelay: "0.4s" }}
+            >
+              Leading the future of enterprise workflow automation at{" "}
+              <span className="font-semibold text-secondary">Apple</span>.
+              Architecting scalable Airtable solutions that power global
+              operations across 157 markets, transforming complex business
+              processes into streamlined, automated workflows.
             </p>
 
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.6s" }}>
-              <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full">
-                <Database className="w-4 h-4 text-blue-500" />
-                <span className="text-sm">Enterprise Airtable Solutions</span>
-              </div>
-              <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full">
-                <Workflow className="w-4 h-4 text-purple-500" />
-                <span className="text-sm">Workflow Automation</span>
-              </div>
-              <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full">
-                <Zap className="w-4 h-4 text-amber-500" />
-                <span className="text-sm">Technical Project Management</span>
-              </div>
-            </div>
-
-            <div className="flex gap-4 justify-center lg:justify-start pt-2 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-              <Button size="lg" className="bg-apple-blue hover:bg-blue-600">
-                View My Work
-              </Button>
-              <Button size="lg" variant="outline">
-                Contact Me
-              </Button>
-            </div>
-          </div>
-
-          {/* Visual Element - Only on large screens */}
-          <div className="hidden xl:block w-96 animate-scale-in">
-            <div className="relative">
-              <div className="glass-card p-8 border-2 border-gray-100 dark:border-gray-800 rounded-2xl shadow-xl">
-                <div className="absolute -top-4 -left-4 w-20 h-20 bg-apple-blue rounded-xl flex items-center justify-center text-white">
-                  <Database size={32} />
-                </div>
-                <div className="ml-10 space-y-4">
-                  <div className="h-4 w-3/4 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                  <div className="h-4 w-5/6 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                  <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
-                  <div className="p-2 my-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                    <code className="text-sm text-gray-600 dark:text-gray-400">
-                      {`// Enterprise Airtable Solution\nconst workflow = optimizeProcess(data);\nintegrateSystems(workflow, 'apple-music-api');`}
-                    </code>
+            {/* Achievement Highlights */}
+            <div
+              className="grid grid-cols-2 gap-4 animate-fade-in"
+              style={{ animationDelay: "0.6s" }}
+            >
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-secondary/20">
+                <Trophy className="w-5 h-5 text-secondary" />
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    157+ Markets
                   </div>
-                  <div className="flex gap-2">
-                    <div className="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div className="h-8 w-8 rounded-full bg-green-500"></div>
-                    <div className="h-8 w-8 rounded-full bg-purple-500"></div>
+                  <div className="text-xs text-white/60">Global Deployment</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-secondary/20">
+                <Users className="w-5 h-5 text-secondary" />
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    10,000+ Users
+                  </div>
+                  <div className="text-xs text-white/60">Enterprise Scale</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-secondary/20">
+                <CheckCircle2 className="w-5 h-5 text-secondary" />
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    70% Efficiency
+                  </div>
+                  <div className="text-xs text-white/60">
+                    Process Improvement
                   </div>
                 </div>
               </div>
-              <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-gray-100 dark:bg-gray-800 rounded-2xl -z-10"></div>
+              <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-xl border border-secondary/20">
+                <Workflow className="w-5 h-5 text-secondary" />
+                <div>
+                  <div className="text-sm font-medium text-white">
+                    50+ Integrations
+                  </div>
+                  <div className="text-xs text-white/60">
+                    System Connections
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="flex flex-wrap gap-3 justify-center lg:justify-start animate-fade-in"
+              style={{ animationDelay: "0.8s" }}
+            >
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-secondary/20">
+                <Database className="w-4 h-4 text-secondary" />
+                <span className="text-sm text-white">
+                  Enterprise Airtable Solutions
+                </span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-secondary/20">
+                <Workflow className="w-4 h-4 text-secondary" />
+                <span className="text-sm text-white">Workflow Automation</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-secondary/20">
+                <Zap className="w-4 h-4 text-secondary" />
+                <span className="text-sm text-white">
+                  Technical Project Management
+                </span>
+              </div>
+            </div>
+
+            <div
+              className="flex gap-4 justify-center lg:justify-start pt-2 animate-fade-in"
+              style={{ animationDelay: "1s" }}
+            >
+              <Button
+                size="lg"
+                className="bg-secondary text-primary hover:bg-secondary/90"
+              >
+                View My Projects
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-secondary text-secondary hover:bg-secondary/10"
+              >
+                Schedule Consultation
+              </Button>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <a href="#expertise" aria-label="Scroll down">
-          <ArrowDown className="w-6 h-6 text-gray-400" />
+          <ArrowDown className="w-6 h-6 text-secondary" />
         </a>
       </div>
     </section>
