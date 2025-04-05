@@ -1,49 +1,57 @@
 
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Award } from "lucide-react";
+import { Briefcase, GraduationCap, Award, CheckCircle2 } from "lucide-react";
 
 const BackgroundSection = () => {
   const experience = [
     {
-      role: "Technical Expert",
-      company: "Apple",
-      period: "2020 - Present",
+      role: "Configuration Engineer",
+      company: "Apple Inc.",
+      period: "2022 - Present",
       description:
-        "Leading the development of internal tools and optimizing processes across departments. Implementing Airtable solutions that save thousands of hours annually.",
+        "Leading enterprise system architecture for global marketing initiatives across Apple Music, Apple TV+, and other media services. Designed 'Metronome', a project management tool supporting 157 markets, and built integrated Airtable solutions that serve as unified sources of truth for cross-functional teams.",
       icon: <Briefcase className="w-6 h-6 text-apple-blue" />,
     },
     {
-      role: "Process Optimization Engineer",
-      company: "Technology Consulting Firm",
-      period: "2017 - 2020",
+      role: "Project & Process Engineer",
+      company: "3M",
+      period: "2022",
       description:
-        "Redesigned manufacturing processes for Fortune 500 clients, resulting in improved efficiency and reduced waste. Created custom applications for process monitoring.",
+        "Led capital projects focused on operational efficiency and environmental impact reduction. Designed comprehensive technical systems including an Airtable database with PowerBI integration for data-driven decision making, resulting in 60% reduction in pollution and significant yield improvements.",
       icon: <Briefcase className="w-6 h-6 text-apple-blue" />,
     },
     {
-      role: "Chemical Engineering Degree",
-      company: "University of Technology",
-      period: "2013 - 2017",
+      role: "Process Engineer",
+      company: "Evonik Chemicals",
+      period: "2018 - 2022",
       description:
-        "Specialized in process optimization and systems design. Graduated with honors and received the Outstanding Technical Achievement award.",
+        "Managed critical capital projects and developed innovative technical solutions including emissions tracking dashboards and web-based maintenance systems. Led cross-functional teams in process improvement initiatives and equipment modernization projects.",
+      icon: <Briefcase className="w-6 h-6 text-apple-blue" />,
+    },
+    {
+      role: "B.S. Chemical Engineering",
+      company: "University of California, Riverside",
+      period: "2015 - 2018",
+      description:
+        "Applied engineering principles to complex systems and process optimization. Completed additional certification as a Full Stack Web Developer to augment technical skill set.",
       icon: <GraduationCap className="w-6 h-6 text-apple-blue" />,
     },
   ];
 
   const skills = [
-    "Airtable Expert",
+    "Enterprise Airtable Architecture",
+    "Cross-functional Leadership",
+    "Workflow Automation",
     "Process Optimization",
-    "Automation Design",
-    "JavaScript / TypeScript",
-    "React Development",
-    "Node.js",
-    "Python",
-    "API Integration",
-    "SQL / NoSQL Databases",
-    "Technical Architecture",
-    "Data Analysis",
-    "Chemical Engineering",
+    "System Integration",
+    "Technical Project Management",
+    "Data Analytics & Reporting",
+    "API Implementation",
+    "Lean Six Sigma",
+    "PowerBI Dashboard Development",
+    "Capital Project Management",
+    "Web Application Development",
   ];
 
   return (
@@ -52,8 +60,8 @@ const BackgroundSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4">Professional Background</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            My journey combines formal education in chemical engineering with
-            practical experience in technical implementation and process optimization.
+            A proven track record of leading technical initiatives at global companies,
+            with expertise in system architecture, process engineering, and cross-functional collaboration.
           </p>
         </div>
 
@@ -83,7 +91,7 @@ const BackgroundSection = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold mb-6">Professional Skills</h3>
             <Card className="glass-card animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <CardContent className="pt-6">
                 <div className="grid grid-cols-2 gap-3">
@@ -92,6 +100,7 @@ const BackgroundSection = () => {
                       key={index}
                       className="flex items-center py-2 px-3 bg-gray-100 dark:bg-gray-800 rounded-lg text-sm"
                     >
+                      <CheckCircle2 className="w-4 h-4 mr-2 text-green-500" />
                       {skill}
                     </div>
                   ))}
@@ -101,18 +110,22 @@ const BackgroundSection = () => {
                   <h4 className="text-lg font-semibold mb-4 flex items-center">
                     <Award className="w-5 h-5 mr-2 text-yellow-500" /> Certifications
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     <li className="flex items-center text-sm">
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                      Airtable Certified Expert
+                      Airtable Builder Certification
                     </li>
                     <li className="flex items-center text-sm">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                      Process Optimization Specialist
+                      Full Stack Web Developer (UC Riverside)
                     </li>
                     <li className="flex items-center text-sm">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
-                      Technical Integration Professional
+                      Lean Six Sigma Green Belt
+                    </li>
+                    <li className="flex items-center text-sm">
+                      <div className="w-2 h-2 bg-amber-500 rounded-full mr-2"></div>
+                      Systems Engineering I (Siemens)
                     </li>
                   </ul>
                 </div>

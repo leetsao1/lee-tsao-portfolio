@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowDown, Zap, Command, Database } from "lucide-react";
+import { ArrowDown, Zap, Workflow, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -19,28 +19,28 @@ const HeroSection = () => {
                 Lee Tsao
               </h1>
               <h2 className="text-3xl sm:text-4xl font-bold gradient-text">
-                Technical Expert & Problem Solver
+                Enterprise Solutions Architect
               </h2>
             </div>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              Airtable automation specialist with a chemical engineering background,
-              creating scalable solutions that deliver real-world results. Currently driving
-              innovation at <span className="font-semibold">Apple</span>.
+              Certified Airtable expert and technical project leader with a track record of building 
+              enterprise-scale solutions for cross-functional teams. Currently driving system architecture 
+              and workflow optimization at <span className="font-semibold">Apple</span>.
             </p>
 
             <div className="flex flex-wrap gap-3 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full">
-                <Zap className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm">Airtable Expert</span>
+                <Database className="w-4 h-4 text-blue-500" />
+                <span className="text-sm">Enterprise Airtable Solutions</span>
               </div>
               <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full">
-                <Command className="w-4 h-4 text-blue-500" />
-                <span className="text-sm">Process Optimization</span>
+                <Workflow className="w-4 h-4 text-purple-500" />
+                <span className="text-sm">Workflow Automation</span>
               </div>
               <div className="flex items-center gap-2 bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-full">
-                <Database className="w-4 h-4 text-purple-500" />
-                <span className="text-sm">Web Development</span>
+                <Zap className="w-4 h-4 text-amber-500" />
+                <span className="text-sm">Technical Project Management</span>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ const HeroSection = () => {
                   <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded-full"></div>
                   <div className="p-2 my-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
                     <code className="text-sm text-gray-600 dark:text-gray-400">
-                      {`// Optimization algorithm\nconst process = optimize(data, parameters);\nreturn process.efficiency;`}
+                      {`// Enterprise Airtable Solution\nconst workflow = optimizeProcess(data);\nintegrateSystems(workflow, 'apple-music-api');`}
                     </code>
                   </div>
                   <div className="flex gap-2">

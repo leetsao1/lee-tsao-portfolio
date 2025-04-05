@@ -8,34 +8,34 @@ import { Badge } from "@/components/ui/badge";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Enterprise Airtable System",
+      title: "Metronome: Global Campaign Management System",
       description:
-        "Developed a comprehensive Airtable system for a Fortune 500 company, automating inventory management and reducing manual work by 70%.",
-      tags: ["Airtable", "Automation", "API Integration", "Process Design"],
+        "Architected and implemented a comprehensive project management tool for Apple Music, supporting marketing campaigns across 157 global markets. Streamlined cross-functional collaboration and workflow tracking.",
+      tags: ["Airtable", "API Integration", "Workflow Automation", "Enterprise Scale"],
       link: "#",
       featured: true,
     },
     {
-      title: "Chemical Process Optimizer",
+      title: "Media Services Asset Database",
       description:
-        "Created an algorithm that optimizes chemical manufacturing processes, resulting in 15% reduced waste and significant cost savings.",
-      tags: ["Python", "Data Analysis", "Chemical Engineering", "Optimization"],
+        "Designed and implemented a centralized asset tracking system for Apple TV+, optimizing project workflows and milestone tracking through custom database architecture and integration points.",
+      tags: ["Database Design", "System Integration", "Workflow Optimization", "Asset Management"],
       link: "#",
       featured: true,
     },
     {
-      title: "Cross-Platform Workflow Application",
+      title: "Environmental Impact Monitoring Dashboard",
       description:
-        "Built a portable application that synchronizes workflows across devices, enabling seamless collaboration for distributed teams.",
-      tags: ["React", "Node.js", "Electron", "Cross-platform"],
+        "Developed a comprehensive PowerBI dashboard for emissions tracking at a chemical manufacturing facility, enabling real-time monitoring and compliance reporting while driving a 60% reduction in environmental impact.",
+      tags: ["PowerBI", "Data Analytics", "Environmental Monitoring", "Process Optimization"],
       link: "#",
       featured: false,
     },
     {
-      title: "Supply Chain Dashboard",
+      title: "Predictive Maintenance Web Application",
       description:
-        "Designed an interactive dashboard for real-time supply chain monitoring, improving decision-making response times by 40%.",
-      tags: ["Data Visualization", "React", "API Integration", "Real-time"],
+        "Created a web-based system for tracking and replacing critical production components before failure, resulting in significantly reduced downtime and improved operational reliability.",
+      tags: ["Web Development", "Preventive Maintenance", "Data Analysis", "Manufacturing"],
       link: "#",
       featured: false,
     },
@@ -47,8 +47,8 @@ const ProjectsSection = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="mb-4">Featured Projects</h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            Showcasing solutions that combine technical expertise with
-            practical problem-solving to deliver real impact.
+            Enterprise-scale implementations that demonstrate technical leadership
+            and deliver measurable business impact.
           </p>
         </div>
 
