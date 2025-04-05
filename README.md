@@ -1,4 +1,6 @@
-# Welcome to your Lovable project
+# Lee Tsao Portfolio
+
+A modern portfolio website built with React, TypeScript, and Tailwind CSS.
 
 ## Project info
 
