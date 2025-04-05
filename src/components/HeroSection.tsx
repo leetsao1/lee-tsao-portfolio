@@ -133,7 +133,7 @@ const HeroSection = () => {
 
               {/* Avatar image */}
               <motion.img
-                src="/lovable-uploads/52bb672b-51de-4879-8113-6546351c5996.png"
+                src="/images/emoji.png"
                 alt="Lee Tsao"
                 className="relative w-full h-auto object-contain drop-shadow-2xl animate-float"
                 style={{

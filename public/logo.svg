@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="248" fill="#0071E3" fill-opacity="0.1" stroke="#0071E3" stroke-width="16"/>
+  
+  <!-- Letters -->
+  <g transform="translate(256 256) rotate(-10) translate(-256 -256)">
+    <!-- L -->
+    <path d="M160 140V360H280" stroke="#0071E3" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- T -->
+    <path d="M280 140H400M340 140V360" stroke="#00A3E0" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="256" cy="256" r="180" stroke="#0071E3" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="256" cy="256" r="210" stroke="#00A3E0" stroke-width="2" stroke-dasharray="4 4"/>
+</svg> 
