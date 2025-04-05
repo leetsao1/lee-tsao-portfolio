@@ -2,6 +2,7 @@
 import React from "react";
 import { ArrowDown, Zap, Workflow, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   return (
@@ -14,13 +15,19 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 max-w-xl">
-            <div className="space-y-2 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
-                Lee Tsao
-              </h1>
-              <h2 className="text-3xl sm:text-4xl font-bold gradient-text">
-                Enterprise Solutions Architect
-              </h2>
+            <div className="flex items-center gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <Avatar className="w-24 h-24 rounded-full border-4 border-apple-blue shadow-lg">
+                <AvatarImage src="/lovable-uploads/6b935307-6168-4e6c-af8f-4f693fc5f7c9.png" alt="Lee Tsao" />
+                <AvatarFallback>LT</AvatarFallback>
+              </Avatar>
+              <div className="space-y-2">
+                <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
+                  Lee Tsao
+                </h1>
+                <h2 className="text-3xl sm:text-4xl font-bold gradient-text">
+                  Enterprise Solutions Architect
+                </h2>
+              </div>
             </div>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 animate-fade-in" style={{ animationDelay: "0.4s" }}>
