@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +7,125 @@
   .section-container {
     @apply container relative mx-auto px-6 md:px-12 lg:px-24 max-w-7xl;
   }
+}
+
+/* Chemistry-inspired animations */
+@keyframes bond-vibration {
+  0%, 100% { transform: scaleX(1); }
+  50% { transform: scaleX(1.1); }
+}
+
+@keyframes atom-orbit {
+  0% { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+}
+
+@keyframes reaction-pulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes catalyst-appear {
+  0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes molecule-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Element card types */
+.element-card {
+  @apply relative overflow-hidden rounded-lg p-4 transition-all duration-300;
+}
+
+.element-nonmetal {
+  @apply bg-cyan-900/30 border border-cyan-500/20 hover:border-cyan-400/40;
+}
+
+.element-metal {
+  @apply bg-blue-900/30 border border-blue-500/20 hover:border-blue-400/40;
+}
+
+.element-noble-gas {
+  @apply bg-purple-900/30 border border-purple-500/20 hover:border-purple-400/40;
+}
+
+.element-metalloid {
+  @apply bg-teal-900/30 border border-teal-500/20 hover:border-teal-400/40;
+}
+
+/* Laboratory theme styling */
+.lab-container {
+  @apply bg-slate-900/80 backdrop-blur-sm border border-slate-700/50 rounded-xl;
+}
+
+.lab-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.molecular-bond {
+  @apply h-0.5 w-full bg-gradient-to-r from-cyan-500/50 to-blue-500/50;
+}
+
+.atom-container {
+  @apply relative inline-flex items-center justify-center;
+}
+
+.atom-nucleus {
+  @apply w-2 h-2 rounded-full bg-cyan-400;
+}
+
+.atom-orbit {
+  @apply absolute w-8 h-8 rounded-full border border-dashed border-cyan-500/40;
+}
+
+.atom-electron {
+  @apply absolute w-1 h-1 rounded-full bg-blue-400;
+  animation: atom-orbit 3s linear infinite;
+}
+
+.reaction-container:hover .molecular-bond {
+  animation: bond-vibration 1s ease-in-out infinite;
+}
+
+.reaction-container:hover .atom-nucleus {
+  animation: reaction-pulse 2s ease-in-out infinite;
+}
+
+/* Metric visualization */
+.metric-container {
+  @apply relative px-4 py-3 rounded-lg bg-slate-900/50 border border-slate-700/50;
+}
+
+.metric-value {
+  @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500;
+}
+
+.metric-label {
+  @apply text-sm text-slate-400;
+}
+
+.metric-icon {
+  @apply absolute right-3 top-3 text-cyan-500/40;
+}
+
+/* Flowchart connections */
+.flow-connection {
+  @apply relative h-10 w-0.5 mx-auto bg-gradient-to-b from-cyan-500/50 to-blue-500/50;
+}
+
+.flow-connection::before, 
+.flow-connection::after {
+  content: '';
+  @apply absolute w-3 h-3 rounded-full;
+}
+
+.flow-connection::before {
+  @apply -top-1.5 -left-1 bg-cyan-400;
+}
+
+.flow-connection::after {
+  @apply -bottom-1.5 -left-1 bg-blue-400;
 }
