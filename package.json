@@ -16,6 +16,8 @@
     "@radix-ui/react-scroll-area": "^1.0.5",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.1.2",
+    "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.82",
     "browserslist": "^4.24.4",
     "caniuse-lite": "^1.0.30001711",
     "class-variance-authority": "^0.7.1",

@@ -1,63 +1,190 @@
-
 import React from "react";
-import { ArrowUp } from "lucide-react";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-900 py-12 border-t border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-2 md:col-span-2">
-            <h3 className="text-xl font-bold mb-4 gradient-text">Lee Tsao</h3>
-            <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
-              Airtable expert and technical problem solver, creating innovative 
-              solutions at the intersection of engineering and software development.
+    <footer className="relative py-12 bg-slate-900/90 backdrop-blur-sm border-t border-cyan-500/10">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="section-container relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+          {/* Logo and Description */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="col-span-2"
+          >
+            <h3 className="text-2xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                Lee Tsao
+              </span>
+            </h3>
+            <p className="text-slate-400 mb-6">
+              Airtable expert and technical problem solver, creating innovative
+              solutions at the intersection of engineering and software
+              development.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">LinkedIn</a>
-              <a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">GitHub</a>
-              <a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">Twitter</a>
+              <a
+                href="https://linkedin.com/in/leetsao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/leetsao1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/leetsao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
             </div>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-500 hover:text-apple-blue transition-colors">Home</a></li>
-              <li><a href="#expertise" className="text-gray-500 hover:text-apple-blue transition-colors">Expertise</a></li>
-              <li><a href="#projects" className="text-gray-500 hover:text-apple-blue transition-colors">Projects</a></li>
-              <li><a href="#background" className="text-gray-500 hover:text-apple-blue transition-colors">Background</a></li>
-              <li><a href="#contact" className="text-gray-500 hover:text-apple-blue transition-colors">Contact</a></li>
+              <li>
+                <a
+                  href="#home"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#expertise"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Expertise
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#background"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Background
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+          </motion.div>
+
+          {/* Services */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">Airtable Automation</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">Process Optimization</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">Web Development</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">Technical Consulting</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-apple-blue transition-colors">Workflow Design</a></li>
+              <li>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Airtable Automation
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Process Optimization
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Web Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Technical Consulting
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  Workflow Design
+                </a>
+              </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
-        
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+
+        {/* Copyright */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-12 pt-8 border-t border-cyan-500/10 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p className="text-slate-400 text-sm mb-4 md:mb-0">
             © {currentYear} Lee Tsao. All rights reserved.
           </p>
-          
-          <a 
-            href="#home" 
-            className="flex items-center text-gray-500 hover:text-apple-blue transition-colors"
-          >
-            <span className="mr-2">Back to top</span>
-            <ArrowUp className="w-4 h-4" />
-          </a>
-        </div>
+          <div className="flex items-center space-x-2">
+            <a
+              href="#home"
+              className="text-slate-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+            >
+              Back to top
+            </a>
+          </div>
+        </motion.div>
       </div>
     </footer>
   );
